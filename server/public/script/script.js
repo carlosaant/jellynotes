@@ -12,6 +12,7 @@ function updatePosts() {
     })
     .then((json) => {
       let posts = JSON.parse(json);
+      let postsElement = "";
       posts.forEach((post) => {
         const cardPost = `<div id=${post.id} class="card mt-3">
         <div class="card-header">
@@ -24,8 +25,9 @@ function updatePosts() {
           <div class="card-text">${post.date_created}</div>
         </div>
         </div>`;
-        divPosts.innerHTML += cardPost;
+        postsElement += cardPost;
       });
+      divPosts.innerHTML = postsElement;
     });
 }
 
