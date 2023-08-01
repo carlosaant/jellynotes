@@ -41,28 +41,30 @@
         </ul>
       </header>
       <!--  -->
-      <div class="mb-2 col-8 col-sm-5">
-        <label for="post_title" class="form-label">Título</label>
-        <input
-          type="text"
-          class="form-control"
-          id="post_title"
-          placeholder="Título"
-        />
-      </div>
-      <div class="mb-3 col col-sm-8">
-        <label for="post_desc" class="form-label">Descrição</label>
-        <textarea
-          class="form-control"
-          id="post_desc"
-          rows="3"
-          placeholder="Descrição do Post.."
-        ></textarea>
-      </div>
-      <div class="mb-3">
-        <button type="submit" class="btn btn-primary mb-3" onclick="newPost()">
-          Salvar
-        </button>
+      <div class="col col-sm-6 mx-auto">
+        <div class="form-floating mb-2 col-8 col-sm-5">
+          <input
+            type="text"
+            class="form-control"
+            id="post_title"
+            placeholder="Título"
+          />
+          <label for="post_title">Título</label>
+        </div>
+        <div class="form-floating mb-3 col">
+          <textarea
+            class="form-control"
+            id="post_desc"
+            rows="3"
+            placeholder="Descrição"
+          ></textarea>
+          <label for="post_desc">Descrição</label>
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-dark mb-3" onclick="newPost()">
+            Salvar Novo Post
+          </button>
+        </div>
       </div>
       <!--  -->
       <h2>Mural</h2>
