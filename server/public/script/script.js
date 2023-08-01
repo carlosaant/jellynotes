@@ -14,7 +14,7 @@ function updatePosts() {
       let posts = JSON.parse(json);
       let postsElement = "";
       posts.forEach((post) => {
-        const cardPost = `<div id=${post.id} class="card mt-3">
+        const cardPost = `<div id=${post.id} class="card col col-sm-3 m-1">
         <div class="card-header">
           <h5 class="card-title">${post.title}</h5>
         </div>
