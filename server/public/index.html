@@ -41,13 +41,14 @@
         </ul>
       </header>
       <!--  -->
-      <div class="col col-sm-6 mx-auto">
+      <form class="col col-sm-6 mx-auto needs-validation">
         <div class="form-floating mb-2 col-8 col-sm-5">
           <input
             type="text"
             class="form-control"
             id="post_title"
             placeholder="Título"
+            required
           />
           <label for="post_title">Título</label>
         </div>
@@ -57,15 +58,16 @@
             id="post_desc"
             rows="3"
             placeholder="Descrição"
+            required
           ></textarea>
           <label for="post_desc">Descrição</label>
         </div>
         <div class="mb-3">
-          <button type="submit" class="btn btn-dark mb-3" onclick="newPost()">
+          <button id="btn_submit_post" type="submit" class="btn btn-dark mb-3">
             Salvar Novo Post
           </button>
         </div>
-      </div>
+      </form>
       <!--  -->
       <h2 class="py-3">Mural</h2>
       <div id="posts" class="d-flex flex-column flex-sm-row flex-wrap"></div>

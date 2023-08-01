@@ -1,7 +1,17 @@
 const appURL = "http://localhost:5000";
 let divPosts = document.getElementById("posts");
+let btnSubmit = document.getElementById("btn_submit_post");
 
 document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelector(".needs-validation")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  btnSubmit.addEventListener("click", () => {
+    newPost();
+  });
   updatePosts();
 });
 
@@ -31,4 +41,6 @@ function updatePosts() {
     });
 }
 
-function newPost() {}
+function newPost() {
+  console.log("clicou para enviar");
+}
