@@ -31,13 +31,14 @@ function updatePosts() {
         <div class="card-body d-flex">
           <div class="card-text col-10 pe-1">${post.description}</div>
           <div class="d-flex align-items-center">
-            <button class="btn btn-danger btn-sm rounded-0" onclick="">Delete</button>
+            <button class="btn btn-danger btn-sm rounded-0" onclick="deletePost(${post.id})">Delete</button>
           </div>
         </div>
         <div class="card-footer">
-          <div class="card-text">${post.date_created}</div>
+          <div class="card-text text-end">
+           <small class="text-body-secondary">Created: ${post.date_created}</small>
+          </div>
         </div>
-        
         </div>`;
         postsElement += cardPost;
       });

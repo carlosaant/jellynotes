@@ -15,7 +15,11 @@ router.get("/all", (req, res) => {
 router.post("/new", express.json(), (req, res) => {
   let title = req.body.title;
   let description = req.body.description;
-  let date_created = Date.now();
+  let d = new Date(Date.now());
+  let date_created = `
+  ${d.toLocaleString("en-US", { month: "short" })}-${d.toLocaleString("en-US", {
+    day: "numeric",
+  })}-${d.toLocaleString("en-US", { year: "numeric" })}`;
 
   posts.newPost(title, description, date_created);
 
