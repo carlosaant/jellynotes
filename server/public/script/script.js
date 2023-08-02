@@ -28,17 +28,25 @@ function updatePosts() {
         <div class="card-header">
           <h5 class="card-title">${post.title}</h5>
         </div>
-        <div class="card-body">
-          <div class="card-text">${post.description}</div>
+        <div class="card-body d-flex">
+          <div class="card-text col-10 pe-1">${post.description}</div>
+          <div class="d-flex align-items-center">
+            <button class="btn btn-danger btn-sm rounded-0" onclick="">Delete</button>
+          </div>
         </div>
         <div class="card-footer">
           <div class="card-text">${post.date_created}</div>
         </div>
+        
         </div>`;
         postsElement += cardPost;
       });
       divPosts.innerHTML = postsElement;
     });
+}
+
+function deletePost(id) {
+  console.log(id);
 }
 
 function newPost() {
