@@ -64,17 +64,16 @@ function newPost() {
     let title = document.getElementById("post_title").value;
     let description = document.getElementById("post_desc").value;
     let post = { title, description };
-    console.log(post);
     const options = {
       method: "POST",
       headers: new Headers({ "content-type": "application/json" }),
       body: JSON.stringify(post),
     };
 
-    fetch(appURL + "/api/new", options)
-      .then((res) => {
-        console.log(res);
-      })
-      .then(updatePosts());
+    fetch(appURL + "/api/new", options).then(() => {
+      document.getElementById("post_title").value = "";
+      document.getElementById("post_desc").value = "";
+      updatePosts();
+    });
   }
 }
