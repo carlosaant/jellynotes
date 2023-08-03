@@ -46,8 +46,14 @@ function updatePosts() {
     });
 }
 
-function deletePost(id) {
-  console.log(id);
+function deletePost(post) {
+  const options = {
+    method: "DELETE",
+    headers: new Headers({ "content-type": "application/json" }),
+  };
+  fetch(appURL + `/api/del/${post.id}`, options)
+    .then(updatePosts())
+    .catch((err) => console.log(err));
 }
 
 function newPost() {

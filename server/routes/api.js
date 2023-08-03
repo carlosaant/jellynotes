@@ -12,6 +12,13 @@ router.get("/all", (req, res) => {
   res.json(JSON.stringify(posts.getAll()));
 });
 
+router.delete("/del/:id", (req, res) => {
+  let postID = req.params.id;
+  posts.deletePost(postID);
+
+  res.send("Post Deletado");
+});
+
 router.post("/new", express.json(), (req, res) => {
   let title = req.body.title;
   let description = req.body.description;

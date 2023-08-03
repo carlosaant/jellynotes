@@ -16,7 +16,9 @@ module.exports = {
     this.posts.push({ id: idGenerator(), title, description, date_created });
   },
 
-  deletePost(id) {},
+  deletePost(id) {
+    this.posts = this.posts.filter((post) => post.id != id);
+  },
 };
 
 function idGenerator() {
