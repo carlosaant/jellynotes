@@ -1,9 +1,9 @@
 module.exports = {
   posts: [
     {
-      id: "dsdsdsas",
-      title: "Teste",
-      description: "fsdfdfsdfsdf",
+      id: "010101",
+      title: "Titulo Exemplo",
+      description: "Descrição Exemplo para o Post",
       date_created: null,
     },
   ],
